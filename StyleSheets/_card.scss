@@ -1,0 +1,355 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* It handle all cards styles in the site */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+%card {
+  transform-style: preserve-3d;
+  text-align: center;
+  z-index: $normal-priority;
+  box-shadow: $box-shadow;
+}
+
+/*Extended Styles End*/
+
+/*Card group Styles Start*/
+
+.card-group {
+  @include flex-wrap(space-between, row, center, wrap);
+}
+
+.card-group-services {
+  @include flex-wrap(space-around, row-reverse, start, wrap);
+  @include position(relative, 0, 0);
+  height: 100vh;
+  & > :nth-child(1) {
+    transform: translateY(0);
+  }
+  & > :nth-child(2) {
+    transform: translateY(150px);
+  }
+  & > :nth-child(3) {
+    transform: translateY(300px);
+  }
+}
+
+.testimonial-card-group {
+  @include flex-wrap(space-between, row, center, wrap);
+  position: relative;
+}
+
+/*Card group Styles End*/
+
+/*Default Card Start*/
+
+.card {
+  width: 33.333%;
+  height: 35vh;
+  @include flex(center, column, center);
+  position: relative;
+  img {
+    position: relative;
+    width: 50%;
+    margin: auto;
+  }
+  h1 {
+    color: $primary-color;
+    font-size: $medium-font;
+    text-align: center;
+  }
+  p {
+    color: $secondary-color;
+    font-size: $small-font;
+    text-align: center;
+  }
+}
+
+.card-default {
+  @extend %card;
+  width: 40%;
+  margin: $spacing-1 0;
+  position: relative;
+  .card-img {
+    width: 100%;
+    padding: $spacing-1 $spacing-1;
+    position: relative;
+  }
+  h1 {
+    color: $primary-color;
+  }
+}
+
+/*Default Card End*/
+
+/* Card Text Start */
+
+.card-text {
+  width: 30%;
+  height: 30vh;
+  box-shadow: $box-shadow;
+  border-radius: $radius-20;
+  @include flex(center, column, center);
+  position: relative;
+  h1 {
+    color: $primary-color;
+    font-size: $medium-font;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: $small-font;
+    text-align: center;
+  }
+}
+
+/* Card Text End */
+
+/*Card icon Styles Start*/
+
+.card-icon {
+  @extend %card;
+  width: 30%;
+  @include position(relative, 0, 0);
+  color: $white-color;
+  margin-bottom: $spacing-5;
+}
+.card-icon-bg {
+  height: 230px;
+  width: 100%;
+  background-color: white;
+}
+
+.card-icon-img {
+  @include position(absolute, 50%, 0);
+  transform: translate(-50%, -50%) translateZ(60px);
+  width: $icon-large;
+  height: $icon-large;
+}
+
+.card-icon-desc {
+  @include position(absolute, 50%, 50%);
+  transform: translate(-50%, -50%) translateZ(60px);
+  width: 100%;
+  a {
+    color: $primary-color;
+    padding: 0.5rem $spacing-2;
+    background-color: $white-color;
+    font-size: $smallest-font;
+  }
+
+  h1 {
+    color: $primary-color;
+    font-size: $small-font;
+  }
+
+  p {
+    width: 70%;
+    margin: 0 auto;
+    color: $secondary-color;
+    font-size: $smallest-font;
+  }
+}
+
+/*Card icon Styles End*/
+
+/*Card plans Syles Start*/
+
+.card-plans {
+  @extend %card;
+  background-color: $white-color;
+  width: 30%;
+  height: 70%;
+  @include flex(center, column, center);
+  border-radius: $radius-10;
+  @include position(relative, 0, 0);
+  z-index: $medium-priority;
+
+  p,
+  h1 {
+    color: $primary-color;
+  }
+}
+
+.card-plans-desc {
+  padding: $spacing-1;
+  background-color: $white-color;
+  width: 100%;
+
+  .plan-division {
+    h1 {
+      color: #666;
+      font-size: 1rem;
+    }
+  }
+
+  .plan-specs {
+    p {
+      margin: $spacing-2 0 $spacing-1 0;
+      font-size: $smallest-font;
+    }
+    li {
+      h2 {
+        color: $secondary-color;
+        text-align: center;
+        font-size: $smallest-font;
+      }
+    }
+  }
+
+  button {
+    margin-top: $spacing-1;
+    width: 70%;
+  }
+}
+
+.card-desc-heading {
+  margin-bottom: $spacing-2;
+  @include flex(space-between, column, center);
+  h1 {
+    font-size: $medium-font;
+    width: 100%;
+    text-align: left;
+  }
+  .plan-pricing {
+    @include flex(space-between, row, center);
+    width: 100%;
+    h2 {
+      color: #4fdb85;
+      font-size: $medium-font;
+      text-align: left;
+      width: 100%;
+      span {
+        font-size: $smallest-font;
+        color: #666;
+      }
+    }
+    select {
+      color: $primary-color;
+      border: none;
+      border-bottom: 2px solid $primary-color;
+      width: 50%;
+      height: 50px;
+      font-size: $smallest-font;
+      outline: none;
+    }
+  }
+}
+
+/*Card plans Syles End*/
+
+/*Card-Services Syles Start*/
+
+.card-services {
+  width: 30%;
+  height: 50vh;
+}
+
+.card-services-content-container {
+  @extend %card;
+  @include position(relative, 0, 0);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  height: 100%;
+  color: $white-color;
+  background-color: $primary-color;
+  padding: $spacing-3;
+  z-index: $medium-priority;
+}
+
+.card-services-img {
+  width: 90%;
+  height: 40%;
+  transform: translateZ(40px);
+}
+
+.card-services-desc {
+  transform: translateZ(20px);
+  @include flex(space-between, column, center);
+  height: 60%;
+  h1 {
+    font-size: $medium-font;
+    color: $warning-color;
+  }
+  p {
+    font-size: $smallest-font;
+  }
+  a {
+    color: $white-color;
+    font-size: $smallest-font;
+  }
+}
+
+.card-border {
+  @include position(absolute, -10%, -10%);
+  width: 80%;
+  height: 120%;
+  border: 5px solid $primary-color;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+/*Card-Services Syles End*/
+
+/*Testimonials Styles Start*/
+
+.testimonial-card {
+  position: relative;
+  width: 48%;
+  @include flex(space-between, row, center);
+  background-color: $primary-color;
+  padding: $spacing-3;
+  border-radius: $radius-10;
+  margin-bottom: $spacing-3;
+}
+
+.testimonial-card-img {
+  position: relative;
+  width: 50%;
+
+  img {
+    width: 85%;
+  }
+}
+
+.testimonial-card-body {
+  margin-left: $spacing-4;
+  position: relative;
+  width: 50%;
+
+  h1 {
+    color: $secondary-color;
+    font-size: $small-font;
+  }
+
+  p {
+    color: $white-color;
+    text-align: justify;
+  }
+
+  h4 {
+    color: $white-color;
+  }
+
+  h5 {
+    color: $white-color;
+  }
+}
+
+/*Testimonials Styles End*/
+
+/*End of the file*/

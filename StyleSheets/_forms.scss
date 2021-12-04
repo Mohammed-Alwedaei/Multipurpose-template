@@ -1,0 +1,212 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* It handle all Forms styles in the site */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+%input-field {
+  width: 400px;
+  height: 50px;
+  color: $primary-color;
+  border: none;
+  border-bottom: 2px solid $blue-color;
+  font-size: $smallest-font;
+  outline: none;
+}
+
+%label {
+  font-size: $smallest-font;
+  width: 100%;
+  text-align: left;
+}
+
+/*Extended Styles End*/
+
+/*Reusable Classes Start*/
+
+.name-field-group {
+  @include flex(space-between, row, center);
+  width: 100%;
+  input {
+    width: 60%;
+  }
+}
+
+.name-field,
+.email-field,
+.textarea-field,
+.select-field {
+  @include flex(space-between, column, center);
+  width: 100%;
+  input,
+  textarea,
+  select {
+    margin-right: auto;
+  }
+}
+
+/*Reusable Classes End*/
+
+/*Contact Us form Styles Start*/
+
+.contact-form {
+  min-height: 100vh;
+}
+
+.contact-page-form {
+  @include flex(space-around, column, center);
+  width: 40%;
+  background-color: $white-color;
+  border-radius: $radius-20;
+  min-height: 70vh;
+  box-shadow: $box-shadow;
+  padding-left: $spacing-3;
+  position: relative;
+  label {
+    @extend %label;
+    color: $blue-color;
+  }
+
+  input,
+  textarea,
+  select {
+    color: $primary-color;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    width: 80%;
+    height: 50px;
+    font-size: $smallest-font;
+    outline: none;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+    padding-top: $spacing-1;
+  }
+
+  ::placeholder {
+    color: $secondary-color;
+  }
+}
+
+.form-buttons {
+  margin: $spacing-3 auto 0 $spacing-1;
+  @include flex(space-between, row, center);
+  width: 75%;
+  button {
+    width: 30%;
+  }
+}
+
+.form-sessions {
+  @include flex(space-between, column, center);
+  min-height: 70vh;
+  position: relative;
+}
+
+.form-phone,
+.form-email {
+  @include flex(space-around, column, start);
+  position: relative;
+  text-align: left;
+  padding: $spacing-2;
+  box-shadow: $box-shadow;
+  border-radius: $radius-20;
+  min-height: 20vh;
+  width: 100%;
+  background-color: $white-color;
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  p {
+    color: $secondary-color;
+  }
+}
+
+.contact-form {
+  @include flex(space-between, row, center);
+  height: 80vh;
+}
+
+/*Contact Us form Styles End*/
+
+/*Coming Soon Styles Start*/
+
+.coming-soon {
+  @include flex(baseline, row, center);
+  .morning-btn {
+    width: 30%;
+    padding: 0 $spacing-1;
+  }
+}
+
+.coming-soon-email-field {
+  input {
+    @extend %input-field;
+    border-bottom-left-radius: $radius-05;
+    border-top-left-radius: $radius-05;
+  }
+}
+
+/*Coming Soon Styles End*/
+
+/*Blog Form Comments Start*/
+
+#submit-comment {
+  @include flex(space-between, column, baseline);
+  height: 50vh;
+  margin-top: $spacing-5;
+
+  label {
+    @extend %label;
+    color: $primary-color;
+  }
+
+  input,
+  textarea,
+  select {
+    color: $primary-color;
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    height: 50px;
+    font-size: $smallest-font;
+    outline: none;
+    resize: none;
+    padding-left: $spacing-2;
+  }
+
+  textarea,
+  input[type="email"] {
+    width: 80%;
+  }
+
+  textarea {
+    font-size: $small-font;
+  }
+
+  button {
+    margin-top: $spacing-2;
+  }
+}
+
+/*Blog Form Comments End*/
+
+/*End of the file*/

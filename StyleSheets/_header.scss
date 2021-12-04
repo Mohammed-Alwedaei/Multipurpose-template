@@ -1,0 +1,252 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* It handle all Headers and navs in the website */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+//Add Here if needed
+
+/*Extended Styles End*/
+
+/* Header Styles Start */
+
+header {
+  @include position(absolute, 0, 0);
+  padding: $spacing-1 $spacing-5;
+  width: 100vw;
+  z-index: $extreme-priority;
+  box-shadow: $box-shadow;
+  background-color: $white-color;
+  transition: all 1s $ease-in;
+  .fa-search {
+    font-size: $small-font;
+  }
+}
+
+.header-content {
+  @include flex(space-between, row, center);
+  width: 100%;
+}
+/* Hedaer Styles End */
+
+/* Shop Cart Meny Styles Start */
+
+.shop-menu {
+  @include flex(space-between, row, center);
+  i {
+    color: $primary-color;
+    font-size: $small-font;
+    margin-left: auto;
+    margin-right: $spacing-5;
+  }
+}
+
+/* Shop Cart Meny Styles End */
+
+/* Burger Menu Styles Start */
+
+.burger {
+  height: 25px;
+  @include flex(space-between, column, center);
+  cursor: pointer;
+  .line1.show {
+    transform: rotate(45deg) translate(7px, 6px);
+    //background-color: $white-color;
+  }
+  .line2.show {
+    opacity: 0;
+  }
+  .line3.show {
+    transform: rotate(-45deg) translate(7px, -9px);
+    //background-color: $white-color;
+  }
+}
+.line1,
+.line2,
+.line3 {
+  background-color: $primary-color;
+  height: 5px;
+  width: 50px;
+  border-radius: $radius-50;
+}
+
+/* Burger Menu Styles End */
+
+/* Navigation Menu Styles Start */
+
+.navigation {
+  padding: 0 $spacing-5;
+  width: 100%;
+  height: 100%;
+  @include position(fixed, 0, 0);
+  clip-path: circle(50px at 100% -50%);
+  background-color: $primary-color;
+  @include flex(space-between, row, center);
+  z-index: $high-priority;
+  overflow: hidden;
+}
+
+.nav-links {
+  list-style: none;
+  transform: translateX(-100%);
+  width: 100%;
+  a {
+    color: $white-color;
+    font-size: $biggest-font;
+    text-decoration: none;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.nav-contact {
+  flex-basis: 60%;
+  height: 30vh;
+  @include flex(space-between, column, start);
+  text-align: left;
+  transform: translateX(100%);
+  width: 100%;
+
+  h1 {
+    color: $white-color;
+    font-size: $big-font;
+  }
+
+  p {
+    color: white;
+  }
+}
+
+.nav-social-media {
+  @include flex(space-between, row, center);
+  width: 100%;
+  height: 50%;
+  li {
+    list-style: none;
+  }
+  a {
+    color: $white-color;
+    font-size: $medium-font;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+/* Navigation Menu Styles End */
+
+/* Addational Navigation Effect Styles Start */
+
+.navigation-effect-1,
+.navigation-effect-2 {
+  width: 100%;
+  height: 100%;
+  @include position(fixed, 0, 0);
+  @include flex(space-between, row, center);
+  z-index: $medium-priority;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.navigation-effect-1 {
+  background-color: $secondary-color;
+  clip-path: circle(50px at 0% -20%);
+}
+
+.navigation-effect-2 {
+  clip-path: circle(50px at 100% 110%);
+  background-color: $blue-color;
+}
+
+/* Addational Navigation Effect Styles End */
+
+/* Motto Styles Start*/
+
+#logo {
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+#motto {
+  width: 70px;
+}
+
+.motto-circle-02 {
+  transition: all 0.4s $ease-in;
+}
+
+#logo-link:hover .motto-circle-02 {
+  transform: translate(-39%, 45%);
+}
+
+.logo-container {
+  @include flex(center, row, center);
+}
+
+.motto-section {
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+/* Motto Styles End*/
+
+/* Drop Down Menu Start */
+
+.dropdown-container {
+  @include flex(space-around, row, center);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  h3 {
+    color: $primary-color;
+    font-size: $smallest-font;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  a {
+    color: $secondary-color;
+    background-color: $white-color;
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: $smallest-font;
+    text-decoration: none;
+    padding: $spacing-1 $spacing-2;
+    transition: all 0.4s $ease-in;
+    &:hover {
+      background-color: rgb(230, 228, 228);
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Drop Down Menu End */
+
+/* End of The File */

@@ -1,0 +1,79 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* It Handle All Mixins In The Website */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+//Add Here if needed
+
+/*Extended Styles End*/
+
+/* Flex Mixin Start */
+
+@mixin flex($justify, $direction, $align) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+/* Flex Mixin End */
+
+/* Flex Mixin With Wrap Start */
+
+@mixin flex-wrap($justify, $direction, $align, $wrap) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+/* Flex Mixin With Wrap End */
+
+/* Position Mixin Start */
+
+@mixin position($position, $left, $top) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+/* Position Mixin End */
+
+/* Container Mixin Start */
+
+@mixin container($width, $margin) {
+  width: $width;
+  margin: 0 $margin;
+}
+
+/* Container Mixin End */
+
+/*Backgrounds Mixin Start*/
+
+@mixin background($background, $position, $repeat) {
+  background-image: $background;
+  background-position: $position $position;
+  background-repeat-y: $repeat;
+  background-repeat-x: no-repeat;
+  background-size: cover;
+}
+
+/*Backgrounds Mixin End*/
+
+/*End Of the File*/

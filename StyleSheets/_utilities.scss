@@ -1,0 +1,528 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* It handle all Headers and navs in the website */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+//Add Here if needed
+
+/*Extended Styles End*/
+
+/* Position Classes Start */
+
+.relative {
+  @include position(relative, 0, 0);
+}
+
+.absolute {
+  @include position(absolute, 0, 0);
+}
+
+.fixed {
+  @include position(fixed, 0, 0);
+}
+
+/* Position Classes Start */
+
+/* Containers Classes Start */
+
+.container-sm {
+  @include container($container-w, auto);
+}
+
+/* Containers Classes End */
+
+/* Height Classes Start */
+
+.vh-100 {
+  height: 100vh;
+}
+
+.vh-min-100 {
+  min-height: 100vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.vh-25 {
+  height: 25vh;
+}
+
+.vh-75 {
+  height: 75vh;
+}
+
+/* Height Classes End */
+
+/* Height Classes Start */
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+/*Height Classes End*/
+
+/*Background Classes Start*/
+
+.hero-bg-vh-50 {
+  @include background($small-bg, center, no-repeat);
+  height: 50vh;
+}
+
+.hero-bg-vh-100 {
+  @include background($background-01, center, no-repeat);
+  height: 100vh;
+}
+.hero-bg-vh-100-full {
+  @include background(url("../Images/Home-Page.svg"), center, no-repeat);
+  height: 100vh;
+}
+
+.hero-content {
+  @include flex(space-around, row, center);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  .buttons {
+    margin-top: $spacing-3;
+    width: 60%;
+    @include flex(space-between, row, center);
+    padding: 0 $spacing-1;
+  }
+}
+
+.hero-text-100 {
+  width: 100%;
+  text-align: center;
+  @include flex(center, column, center);
+  h1 {
+    color: $primary-color;
+    font-size: $big-font;
+    width: 100%;
+  }
+  p {
+    width: 50%;
+    color: $secondary-color;
+  }
+}
+
+.hero-text-100-center {
+  width: 100%;
+  height: 50%;
+  @include flex(center, column, center);
+  h1 {
+    color: $primary-color;
+    font-size: $biggest-font;
+    width: 100%;
+    text-align: center;
+  }
+  p {
+    @include container(50%, auto);
+    color: $secondary-color;
+    font-size: $small-font;
+    text-align: center;
+  }
+}
+
+.hero-text {
+  width: 50%;
+  padding-left: $spacing-7;
+  margin-left: $spacing-7;
+  margin-right: auto;
+  h1 {
+    color: $primary-color;
+    font-size: $biggest-font;
+  }
+  p {
+    width: 80%;
+    color: $secondary-color;
+    font-size: $smallest-font;
+  }
+}
+
+.hero-img {
+  img {
+    width: 100%;
+  }
+}
+
+.hero-text-vh-100 {
+  width: 70%;
+  margin-right: auto;
+  padding-left: $spacing-3;
+  h1 {
+    color: $primary-color;
+    font-size: $big-font;
+  }
+  p {
+    width: 60%;
+    color: $secondary-color;
+    font-size: $small-font;
+  }
+}
+
+.hero-text-vw-100 {
+  width: 100vw;
+  margin: auto;
+  h1 {
+    color: $primary-color;
+    font-size: $big-font;
+    text-align: center;
+  }
+  p {
+    color: $secondary-color;
+  }
+}
+
+.hero-img-vh-100 {
+  width: 120%;
+  height: 120%;
+  overflow: hidden;
+  img {
+    @include position(relative, 0%, 5%);
+    height: auto;
+    width: 120%;
+  }
+}
+
+.hero-text-left {
+  width: 60%;
+  margin-right: auto;
+  padding-left: 10rem;
+}
+
+/*Background Classes End*/
+
+/* Colours Classes Start */
+
+.primary-color {
+  color: $primary-color;
+}
+
+.secondary-color {
+  color: $secondary-color;
+}
+
+.primary-bg {
+  background-color: $primary-color;
+}
+
+.secondary-bg {
+  background-color: $secondary-color;
+}
+
+/* Colours Classes End */
+
+/* Font Sizes Start */
+
+.biggest-font {
+  font-size: $biggest-font;
+}
+
+.big-font {
+  font-size: $big-font;
+}
+
+.medium-font {
+  font-size: $medium-font;
+}
+
+.small-font {
+  font-size: $small-font;
+}
+
+.smallest-font {
+  font-size: $smallest-font;
+}
+
+/* Font Sizes End */
+
+/*Text Align Classes Start*/
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/*Text Aligns End*/
+
+/* Display Start */
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+/* Display End */
+
+/* Flex Classes Start */
+
+.d-flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.align-item-start {
+  align-items: flex-start;
+}
+
+.align-item-end {
+  align-items: flex-end;
+}
+
+.align-content-center {
+  align-content: flex-start;
+}
+
+.align-content-start {
+  align-content: flex-start;
+}
+
+.align-content-end {
+  align-content: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: no-wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+/* Flex Classes End */
+
+/* Text Classes Start */
+
+.primary-heading {
+  font-size: $big-font;
+  color: $primary-color;
+}
+
+.secondary-heading {
+  font-size: $small-font;
+  color: $secondary-color;
+}
+
+.special-heading {
+  color: $warning-color;
+}
+
+.gradient-text {
+  background-image: $gradient-jshine;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Text Classes End */
+
+/*Direct Tags Selection Start*/
+
+p {
+  font-weight: 400;
+  font-style: normal;
+  //text-align: justify;
+}
+
+/*Direct Tags Selection End*/
+
+/*Margins Start*/
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+/*Margins End*/
+
+.img-container {
+  position: relative;
+}
+
+/* Background Gradient Start */
+
+.gradient-portrait {
+  background-image: $gradient-portrait;
+}
+
+.gradient-delicate {
+  background-image: $gradient-delicate;
+}
+
+.gradient-morning {
+  background-image: $gradient-morning;
+}
+
+.gradient-sunset {
+  background-image: $gradient-sunset;
+}
+
+.gradient-jshine {
+  @include background($gradient-jshine, center, no-repeat);
+}
+
+/* Background Gradient End */
+
+.breadcrumb-hub {
+  color: $primary-color;
+  font-size: $smallest-font;
+  text-decoration: none;
+}
+
+.breadcrumb-item {
+  color: $secondary-color;
+  font-size: $smallest-font;
+  text-decoration: none;
+
+  &::before {
+    content: "/";
+    margin: 0 0.5rem;
+  }
+}
+
+/* Overflow Clases Start */
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+/* Overflow Clases End */
+
+/* highlight Classes Start */
+
+/* highlight Classes End */
+
+/* Other Classes Start */
+
+.section-desc {
+  @include flex(space-between, row, center);
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid $primary-color;
+}
+
+.link-default {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-divider {
+  height: 30vh;
+}
+/* Other Classes End */
+
+/* End Of The File */

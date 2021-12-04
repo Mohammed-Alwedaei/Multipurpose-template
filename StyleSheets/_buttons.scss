@@ -1,0 +1,630 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* All Buttons styles in the site are handled in this file */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extended Styles Start */
+
+%submit-button {
+  height: 50px;
+  border: 3px solid $primary-color;
+  color: $primary-color;
+  padding: 0 $spacing-2;
+  background-color: inherit;
+  transition: all 0.4s $ease-in;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
+
+%swiper-btn {
+  background-image: $gradient-morning;
+  color: $white-color;
+  padding: $spacing-2;
+  font-size: $small-font;
+  border-radius: $radius-50;
+  cursor: pointer;
+}
+
+%custom-btn {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  width: 20%;
+  height: 50px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+%btn-side-before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s $ease-in;
+}
+
+%btn-side {
+  position: relative;
+  border: 2px solid;
+  background-color: inherit;
+  transition: all 0.4s ease;
+  border-radius: $radius-10;
+  overflow: hidden;
+}
+
+%btn-axes-before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+%btn-axes {
+  position: relative;
+  border: 2px solid;
+  background-color: inherit;
+  transition: all 0.4s ease;
+  border-radius: $radius-10;
+  overflow: hidden;
+}
+
+%btn-shine-before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 70%;
+  top: -50px;
+  left: -10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+%btn-shine {
+  position: relative;
+  color: $white-color;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border-radius: $radius-10;
+}
+
+%btn-circle-before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s $ease-in;
+}
+%btn-circle {
+  position: relative;
+
+  background-color: inherit;
+  transition: all 0.4s ease;
+  border-radius: $radius-10;
+  overflow: hidden;
+}
+/* Extended Styles End */
+
+/* Button Group Start */
+
+.button-group {
+  @include flex(space-between, row, center);
+}
+
+.filter-button-group {
+  @include flex(space-between, row, center);
+  width: 30%;
+}
+
+/* Button Group End */
+
+/* Primary Buttons Styles Start */
+
+.primary-btn {
+  &::before {
+    @extend %btn-circle-before;
+    transform: scaleY(2);
+    border-radius: 0 0 50% 50%;
+    transform-origin: top;
+    background-color: $primary-color;
+  }
+  @extend %custom-btn;
+  @extend %btn-circle;
+  color: $white-color;
+  border: 2px solid $primary-color;
+  &:hover::before {
+    transform: scaleY(0);
+  }
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/* Primary Buttons Styles End */
+
+/* Secondary Button Styles Start */
+
+.secondary-btn {
+  &::before {
+    @extend %btn-circle-before;
+    transform: scaleY(0);
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom;
+    background-color: $secondary-color;
+  }
+  @extend %custom-btn;
+  @extend %btn-circle;
+  color: $secondary-color;
+  border: 2px solid $secondary-color;
+  &:hover::before {
+    transform: scaleY(2);
+  }
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/* Secondary Button Styles End */
+
+/* gradient Button Start */
+
+.morning-btn {
+  &::before {
+    @extend %btn-shine-before;
+    transform: translateY(-200%) rotate(-10deg);
+  }
+  @extend %custom-btn;
+  @extend %btn-shine;
+  border-radius: $radius-50;
+  color: $white-color;
+  background-image: $gradient-morning;
+  &:hover::before {
+    transform: translateY(700%) rotate(-10deg);
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+/* gradient Button End */
+
+/* Back to top Button Styles Start */
+
+.back-to-top {
+  &::before {
+    @extend %btn-side-before;
+    transform-origin: bottom;
+    background-image: $gradient-morning;
+    transform: scaleY(0);
+  }
+  @extend %custom-btn;
+  @extend %btn-side;
+
+  @include flex(center, column, center);
+  position: fixed;
+  bottom: 120%;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: 2px solid rgb(255, 164, 2);
+  color: rgb(255, 164, 2);
+  transition: all 0.6s $ease-in;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 400;
+  &:hover::before {
+    transform: scaleY(1);
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+/* Back to top Button Styles End */
+
+/* Btn Side Animation Start */
+
+/* Btn Side top Animation End */
+
+.btn-side-top {
+  &::before {
+    @extend %btn-side-before;
+    transform-origin: top;
+    background-color: $primary-color;
+    transform: scaleY(0);
+  }
+  @extend %custom-btn;
+  @extend %btn-side;
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover::before {
+    transform: scaleY(1);
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+/* Btn Side top Animation End */
+
+/* Btn Side Bottom Animation Start */
+
+.btn-side-bottom {
+  &::before {
+    @extend %btn-side-before;
+    transform-origin: bottom;
+    background-color: $secondary-color;
+    transform: scaleY(0);
+  }
+  @extend %custom-btn;
+  @extend %btn-side;
+  color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover::before {
+    transform: scaleY(1);
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+/* Btn Side Bottom Animation End */
+
+/* Btn Side Left Animation Start */
+
+.btn-side-left {
+  &::before {
+    @extend %btn-side-before;
+    transform-origin: left;
+    background-color: $secondary-color;
+    transform: scaleX(0);
+  }
+  @extend %custom-btn;
+  @extend %btn-side;
+  color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover::before {
+    transform: scaleX(1);
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+/* Btn Side Left Animation End */
+
+/*Btn Side Right Animation Start */
+
+.btn-side-right {
+  &::before {
+    @extend %btn-side-before;
+    transform-origin: right;
+    background-color: $primary-color;
+    transform: scaleX(0);
+  }
+  @extend %custom-btn;
+  @extend %btn-side;
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+/* Btn Side Right Animation End */
+
+/* Btn Axes Animation Start */
+
+.btn-y-axes {
+  &::before {
+    @extend %btn-axes-before;
+    transform: scaleY(0);
+    background-color: $primary-color;
+  }
+  color: $primary-color;
+  border-color: $primary-color;
+  @extend %btn-axes;
+  @extend %custom-btn;
+
+  &:hover::before {
+    transform: scaleY(1);
+  }
+
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/* Btn Axes Animation End */
+
+/* Btn Axes Animation Start */
+
+.btn-x-axes {
+  &::before {
+    @extend %btn-axes-before;
+    background-color: $secondary-color;
+    transform: scaleX(0);
+  }
+  color: $secondary-color;
+  border-color: $secondary-color;
+  @extend %btn-axes;
+  @extend %custom-btn;
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/* Btn Axes Animation End */
+
+/* Btn Axes Animation Start */
+
+.btn-xy-axes {
+  &::before {
+    @extend %btn-axes-before;
+    transform: scale(0);
+    background-color: $primary-color;
+    border-radius: 50px;
+  }
+
+  @extend %btn-axes;
+  @extend %custom-btn;
+  color: $primary-color;
+  border-color: $primary-color;
+  &:hover::before {
+    transform: scale(1);
+    border-radius: 0;
+  }
+
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/* Btn Axes Animation End */
+
+/* Btn Shine Top Animation Start */
+
+.btn-shine-top {
+  &::before {
+    @extend %btn-shine-before;
+    transform: translateY(-200%) rotate(-10deg);
+  }
+
+  @extend %custom-btn;
+  @extend %btn-shine;
+  background-color: $primary-color;
+  &:hover::before {
+    transform: translateY(700%) rotate(-10deg);
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+/*Btn Shine Top Animation End*/
+
+/*Btn Shine Right Animation Start*/
+
+.btn-shine-right {
+  &::before {
+    @extend %btn-shine-before;
+    transform: translateY(600%) rotate(-20deg);
+  }
+
+  @extend %custom-btn;
+  @extend %btn-shine;
+  background-color: $secondary-color;
+  &:hover::before {
+    transform: translateY(-150%) rotate(-20deg);
+  }
+
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*Btn Shine Right Animation End*/
+
+/*Btn Shine Down Animation Start*/
+
+.btn-shine-bottom {
+  &::before {
+    @extend %btn-shine-before;
+    transform: translateY(600%) rotate(-10deg);
+  }
+
+  @extend %custom-btn;
+  @extend %btn-shine;
+  background-color: $primary-color;
+  &:hover::before {
+    transform: translateY(-150%) rotate(-10deg);
+  }
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*Btn Shine Down Animation End*/
+
+/*Btn Shine Left Animation Start*/
+
+.btn-shine-left {
+  &::before {
+    @extend %btn-shine-before;
+    transform: translateY(-150%) rotate(-20deg);
+  }
+  @extend %custom-btn;
+  @extend %btn-shine;
+  background-color: $secondary-color;
+  &:hover::before {
+    transform: translateY(600%) rotate(-20deg);
+  }
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*Btn Shine Left Animation End*/
+
+/*Btn Circle Animation Start*/
+
+.btn-circle-top {
+  &::before {
+    @extend %btn-circle-before;
+    transform: scaleY(0);
+    border-radius: 0 0 50% 50%;
+    transform-origin: top;
+  }
+  @extend %custom-btn;
+  @extend %btn-circle;
+  color: $primary-color;
+  &:hover::before {
+    transform: scaleY(2);
+  }
+  &:hover {
+    color: $white-color;
+  }
+}
+
+/*Btn Circle Animation End*/
+
+/*Btn Circle bottom Animation Start*/
+
+.btn-circle-left {
+  &::before {
+    @extend %btn-circle-before;
+    transform: scaleY(2);
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom;
+  }
+  @extend %custom-btn;
+  @extend %btn-circle;
+  color: $white-color;
+  &:hover::before {
+    transform: scaleY(0);
+  }
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/*Btn Circle bottom Animation End*/
+
+/*Dark Theme Button Start*/
+
+.theme-toggle {
+  @include position(fixed, 40px, 50%);
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  border: none;
+  font-size: $small-font;
+  color: $warning-color;
+  z-index: $extreme-priority;
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+/*Dark Theme Button End*/
+
+/* Filter Button Styles Start */
+
+.filter-button {
+  @extend %custom-btn;
+  color: $secondary-color;
+  border-radius: $radius-30;
+}
+
+/* Filter Button Styles End */
+
+/* Swiper Buttons Start */
+
+.swiper-btn-next-custom {
+  @include position(absolute, 90%, 50%);
+  transform: translate(-90%, -50%);
+  @extend %swiper-btn;
+}
+
+.swiper-btn-prev-custom {
+  @include position(absolute, 10%, 50%);
+  transform: translate(-10%, -50%);
+  @extend %swiper-btn;
+}
+
+.swiper-pagination-bullet-active {
+  background: -moz-linear-gradient(
+    15.65% -261.93% 45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    15.65% -261.93%,
+    80.8% -361.93%,
+    color-stop(0, rgba(251, 223, 99, 1)),
+    color-stop(1, rgba(255, 164, 2, 1))
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBDF63', endColorstr='#FFA402' ,GradientType=0)";
+  background: linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBDF63',endColorstr='#FFA402' , GradientType=1);
+  color: $white-color;
+}
+
+/* Swiper Buttons End */
+
+/* End Of The file */

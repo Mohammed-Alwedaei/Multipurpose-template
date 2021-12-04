@@ -1,0 +1,260 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* To handle all animated classes added in Javascript */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extended Styles Start*/
+
+%footer {
+  @include background(url("../Images/Footer-BG.svg"), center, no-repeat);
+  z-index: 0;
+}
+
+/* Extended Styles End*/
+
+/*Footer Version One Styles Start*/
+
+#footer-version-01 {
+  min-height: 70vh;
+  @extend %footer;
+
+  .footer-media {
+    width: 100%;
+    height: 30vh;
+    @include flex(center, row, center);
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s $ease-in;
+      color: $primary-color;
+      position: relative;
+      border: 2px solid $primary-color;
+
+      span {
+        font-size: $biggest-font;
+        font-weight: 800;
+        height: 100%;
+        width: 100%;
+        display: block;
+        transform: translateY(0);
+        transition: all 0.4s $ease-in;
+      }
+
+      &::before {
+        content: "";
+        @include position(absolute, 0, 0);
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color;
+        transition: all 0.3s $ease-in;
+        z-index: $negative-priority;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+
+      &:hover::before {
+        transform: scaleY(1);
+      }
+
+      &:hover span {
+        color: $white-color;
+        transform: translateY(25%);
+      }
+    }
+  }
+  .footer-content {
+    padding-top: $spacing-5;
+    @include container($container-w, auto);
+
+    ul {
+      @include flex(space-between, row, center);
+      width: 100%;
+
+      li {
+        font-size: 8rem;
+        list-style: none;
+
+        i {
+          color: $white-color;
+          background-color: $primary-color;
+          padding: $spacing-3;
+          border-radius: 50%;
+          transition: all 0.2s $ease-in;
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+  .footer-rights {
+    margin-top: $spacing-3;
+    @include flex(space-between, row, center);
+
+    h1 {
+      font-size: $medium-font;
+      color: $secondary-color;
+    }
+
+    .footer-links {
+      @include flex(space-between, row, center);
+      width: 40%;
+    }
+
+    a {
+      color: $secondary-color;
+      font-size: $smallest-font;
+    }
+  }
+}
+
+/*Footer Version One Styles End*/
+
+/*Footer Version Two Styles Start*/
+
+#footer-version-02 {
+  @extend %footer;
+  min-height: 70vh;
+  padding: $spacing-3 0;
+  @include flex(space-between, column, center);
+  @include container($container-w, auto);
+  hr {
+    width: 100%;
+  }
+  .social-media {
+    @include flex(space-between, row, center);
+    width: 100%;
+
+    li {
+      list-style: none;
+
+      i {
+        color: $primary-color;
+        font-size: $small-font;
+        transition: all 0.4s $ease-in;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .content {
+    @include flex(space-between, row, center);
+    width: 100%;
+
+    li {
+      list-style: none;
+
+      a {
+        color: $secondary-color;
+      }
+
+      h1 {
+        color: $primary-color;
+      }
+    }
+
+    .free-quote {
+      width: 40%;
+
+      h1 {
+        color: $primary-color;
+        font-size: $big-font;
+      }
+
+      p {
+        color: $secondary-color;
+        font-size: 1rem;
+      }
+
+      form {
+        @include flex(center, row, center);
+        input {
+          color: $primary-color;
+          border: none;
+          border-bottom: 2px solid $primary-color;
+          width: 80%;
+          height: 50px;
+          font-size: $smallest-font;
+          border-top-left-radius: $radius-05;
+          border-bottom-left-radius: $radius-05;
+          padding-left: $spacing-1;
+          outline: none;
+          &::placeholder {
+            color: $primary-color;
+          }
+        }
+        button {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+
+    .services {
+      width: 30%;
+    }
+
+    .copyrights {
+      width: 30%;
+    }
+  }
+  .ending {
+    @include flex(space-between, row, center);
+    width: 100%;
+
+    a {
+      margin-right: $spacing-1;
+      color: $secondary-color;
+      font-size: $small-font;
+    }
+
+    h1 {
+      color: $primary-color;
+    }
+  }
+}
+
+/*Footer Version Two Styles End*/
+
+/*Footer Version Three Styles Start*/
+
+#footer-version-03 {
+  @extend %footer;
+  @include flex(space-between, row, center);
+  @include container($container-w, auto);
+  height: 25vh;
+  h3 {
+    color: $primary-color;
+    font-size: $small-font;
+  }
+  a {
+    color: $secondary-color;
+    font-size: $small-font;
+    &:nth-child(1) {
+      margin-right: $spacing-5;
+    }
+  }
+}
+
+/*Footer Version Three Styles End*/
+
+/*End Of The File*/

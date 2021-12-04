@@ -1,0 +1,185 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* It handle all Popups in The Website */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+%popup-heading {
+  font-size: $big-font;
+  text-align: center;
+  color: $primary-color;
+}
+
+%popup-body {
+  width: 60vw;
+  background-color: lighten($dark-theme, 10%);
+  margin: inherit 0;
+  height: 50vh;
+  border-radius: $radius-20;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow: $box-shadow;
+}
+
+/*Extended Styles End*/
+
+/* Popups Container Styles Start */
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include position(fixed, 0, 0);
+  z-index: $extreme-priority;
+}
+
+/* Popups Container Styles End */
+
+/* Confirm - Deny Popup Styles Start */
+
+.confirm-deny-popup {
+  @extend %popup-body;
+  @include position(fixed, 50%, 50%);
+  @include flex(center, column, center);
+  h1 {
+    @extend %popup-heading;
+    color: $primary-color;
+  }
+
+  h2 {
+    color: $warning-color;
+  }
+  h4 {
+    color: $secondary-color;
+    text-align: center;
+  }
+
+  .button-group {
+    @include flex(space-between, row, center);
+    @include container(50%, auto);
+  }
+}
+
+/* Confirm - Deny Popup Styles End */
+
+/* Newsletter Popup Styles Start */
+
+.newslettter-popup {
+  @extend %popup-body;
+  margin: $spacing-5 auto auto auto;
+  @include flex(center, column, center);
+  @include position(fixed, 50%, 50%);
+  margin: $spacing-3 0;
+  position: relative;
+  overflow: hidden;
+  h1 {
+    text-align: center;
+    font-size: $big-font;
+    color: $primary-color;
+  }
+
+  h4 {
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: $spacing-1;
+  }
+}
+
+.popup-email-field {
+  @include flex(center, row, center);
+  input {
+    @extend %input-field;
+    padding-left: $spacing-1;
+    border-top-left-radius: $radius-05;
+    border-bottom-left-radius: $radius-05;
+    &::placeholder {
+      color: $primary-color;
+    }
+  }
+  button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* Newsletter Popup Styles End */
+
+/* Error Popup Styles Start */
+
+.error-popup {
+  @extend %popup-body;
+  @include position(fixed, 50%, 50%);
+  @include flex(center, column, center);
+  h1 {
+    @extend %popup-heading;
+  }
+
+  img {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+/* Error Popup Styles End */
+
+/* Success Popup Styles Start */
+
+.success-popup {
+  @extend %popup-body;
+  @include position(fixed, 50%, 50%);
+  @include flex(center, column, center);
+  h1 {
+    @extend %popup-heading;
+  }
+
+  img {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+/* Success Popup Styles End */
+
+/* Welcome Popup Styles Start */
+
+.welcome-popup {
+  @extend %popup-body;
+  margin: $spacing-3 auto 0 auto;
+  @include flex(center, column, center);
+  @include position(absolute, 50%, 50%);
+  h1 {
+    @extend %popup-heading;
+  }
+
+  img {
+    width: $icon-large;
+    height: $icon-large;
+  }
+
+  button {
+    margin-top: $spacing-2;
+  }
+
+  h4 {
+    margin-top: $spacing-1;
+    color: $white-color;
+  }
+}
+
+/* Welcome Popup Styles End */
+
+/* End Of The File */

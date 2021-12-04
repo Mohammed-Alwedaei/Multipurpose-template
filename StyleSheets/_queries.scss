@@ -1,0 +1,67 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* All Media Queries That Responsible Of Responsive */
+
+//Note: I suggest you don't modify this page because it may break the whole design
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extra Small devices (landscape phones, 576px ) Start */
+
+@mixin extraSmallDevice {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+/* Extra Small devices (landscape phones, 576px ) End */
+
+/* Small devices (landscape phones, 576px and up) Start */
+@mixin smallDevice {
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) End */
+
+/* Medium devices (tablets, 768px and up) Start*/
+@mixin mediumDevice {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) End */
+
+/* Large devices (desktops, 992px and up) Start */
+@mixin largeDevice {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+/* Large devices (desktops, 992px and up) End */
+
+/* Extra large devices (large desktops, 1200px and up) Start */
+@mixin extraLargeDevice {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) End */
+
+/* End Of The File */

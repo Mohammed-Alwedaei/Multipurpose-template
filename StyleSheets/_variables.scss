@@ -1,0 +1,151 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* All Varibales Used In SCSS files */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extended Styles Start */
+
+//Add Here if needed
+
+/* Extended Styles End */
+
+/* Gradients Variables Start */
+
+$gradient-jshine: linear-gradient(45deg, #725cff, #b96eff);
+$gradient-delicate: linear-gradient(to top, #d3cce3, #e9e4f0);
+$gradient-portrait: linear-gradient(to top, #8e9eab, #eef2f3);
+$gradient-morning: linear-gradient(
+  45deg,
+  rgba(251, 223, 99, 1) 0%,
+  rgba(255, 164, 2, 1) 100%
+);
+
+$gradient-sunset: linear-gradient(45deg, #fa7b90, #fdd748);
+
+$gradient-night: linear-gradient(
+  45deg,
+  rgba(3, 22, 55, 1) 0%,
+  rgba(185, 110, 255, 1) 100%
+);
+/* Gradients Variables End */
+
+/* Backgrounds Variables Start */
+
+$small-bg: url("../Images/Quote-banner.svg");
+
+$background-01: url("../Images/Background-01.svg");
+
+/* Backgrounds Variables Start */
+
+/* Colours Variables Start */
+
+$primary-color: #725cff;
+$secondary-color: #b96eff;
+$white-color: #fff;
+$success-color: #4fdb85;
+$dark-theme: #031637;
+$warning-color: #fbdf63;
+$danger-color: #d63939;
+$blue-color: #4850e8;
+$light-blue: #4a74ff;
+
+/* Colours Variables End */
+
+/* Font Sizes Variables Start */
+
+$biggest-font: 6rem;
+$big-font: 4rem;
+$medium-font: 3rem;
+$small-font: 2rem;
+$smallest-font: 1.5rem;
+
+/* Font Sizes Variables End */
+
+/* Spacing Variables Start */
+
+$spacing-7: 7rem;
+$spacing-6: 6rem;
+$spacing-5: 5rem;
+$spacing-4: 4rem;
+$spacing-3: 3rem;
+$spacing-2: 2rem;
+$spacing-1: 1rem;
+
+/* Spacing Variables End */
+
+/* Border Radius Variables Start */
+
+$radius-05: 5px;
+$radius-10: 10px;
+$radius-20: 20px;
+$radius-30: 30px;
+$radius-40: 40px;
+$radius-50: 50px;
+
+/* Border Radius Variables End */
+
+/* Z - index Variables Start */
+
+$extreme-priority: 150;
+$high-priority: 100;
+$medium-priority: 50;
+$low-priority: 10;
+$normal-priority: 1;
+$negative-priority: -10;
+
+/* Z - index Variables End */
+
+/* ICONS Sizez Variables Start */
+
+$icon-medium: 50px;
+$icon-large: 90px;
+
+/* ICONS Sizez Variables End */
+
+/* Easing Variables Start */
+
+$ease-in: cubic-bezier(0, 0.57, 0.43, 0.99);
+
+$ease-out: cubic-bezier(0.08, 0.43, 0.71, 0.99);
+
+$ease-in-out: cubic-bezier(0.65, 0.11, 0.42, 0.99);
+
+/* Easing Variables End */
+
+/* Container Variables Start */
+
+$container-w: 80%;
+$container-w-xs: 70%;
+$container-w-sm: 95%;
+$container-w-lg: 90%;
+
+/* Container Variables End */
+
+/* Box Shadow Variables Start */
+
+$box-shadow: 0 1px 1px rgba($primary-color, 0.4),
+  0 2px 2px rgba($primary-color, 0.3);
+
+/* Box Shadow Variables End */
+
+/* Perspective Variables Start */
+
+$left-perspective: perspective(600px) rotateY(5deg);
+$right-perspective: perspective(600px) rotateY(-5deg);
+
+/* Perspective Variables End */
+
+/* End Of The File */

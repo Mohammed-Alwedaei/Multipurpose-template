@@ -1,0 +1,234 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* All banners styles in the site are handled in this file */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/*Extended Styles Start*/
+
+%banner-essentials {
+  height: 50vh;
+  overflow: visible;
+  margin: $spacing-5 0;
+}
+
+%labels {
+  padding: 0 0.5rem;
+  transition: all 0.4s $ease-in;
+  color: $white-color;
+}
+
+%alerts {
+  @include position(fixed, 80%, 30%);
+  z-index: $extreme-priority;
+  color: $white-color;
+  width: 20%;
+  padding: $spacing-1 $spacing-2;
+  border-top-left-radius: $radius-50;
+  border-bottom-left-radius: $radius-50;
+  font-size: $small-font;
+}
+/*Extended Styles End*/
+
+/*Quote banner styles start*/
+
+#quote-banner {
+  @extend %banner-essentials;
+  @include background($small-bg, center, no-repeat);
+}
+
+.quote-content {
+  @include flex(center, column, center);
+  height: 100%;
+  h1 {
+    color: $primary-color;
+    font-size: $small-font;
+    margin-bottom: $spacing-1;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: $smallest-font;
+    text-align: center;
+  }
+
+  button {
+    margin-top: $spacing-2;
+  }
+}
+
+/*Quote banner styles End*/
+
+/*Newsletter Styles Start*/
+
+#newsletter {
+  @extend %banner-essentials;
+  @include background($small-bg, center, no-repeat);
+}
+
+.newsletter-content {
+  @include flex(center, column, center);
+  height: 100%;
+
+  h1 {
+    color: $primary-color;
+    font-size: $small-font;
+    margin-bottom: $spacing-1;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: $smallest-font;
+  }
+
+  input {
+    width: 50%;
+    height: 50px;
+    color: $primary-color;
+    padding-left: $spacing-1;
+    border: none;
+    border-bottom: 2px solid $blue-color;
+    font-size: $smallest-font;
+    outline: none;
+    border-top-left-radius: $radius-05;
+    border-bottom-left-radius: $radius-05;
+    &::placeholder {
+      color: $primary-color;
+    }
+  }
+
+  form {
+    @include flex(center, row, center);
+    margin-top: $spacing-1;
+    width: 60%;
+  }
+
+  button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 20%;
+  }
+}
+
+/*Newsletter Styles End*/
+
+/*People Quotes Start*/
+
+#person-quote {
+  height: 75vh;
+  background-color: $primary-color;
+  transform: skewY(-2deg);
+  border-top: 20px solid $secondary-color;
+  border-bottom: 20px solid $secondary-color;
+  position: relative;
+}
+
+.person-quote-content {
+  @include flex(center, column, center);
+  height: 100%;
+  @include container(60%, auto);
+  transform: skewY(2deg);
+  p {
+    font-size: $smallest-font;
+    color: $white-color;
+  }
+}
+
+.person-quote-author {
+  @include flex(flex-start, row, center);
+  width: 100%;
+  img {
+    width: 20%;
+    margin-right: $spacing-1;
+  }
+
+  h2 {
+    color: $warning-color;
+    font-size: $small-font;
+  }
+
+  p {
+    color: $white-color;
+    font-size: $small-font;
+  }
+}
+.open-brackets {
+  @include position(absolute, 10%, 7%);
+  width: 10%;
+  opacity: 0.5;
+  user-select: none;
+}
+
+.close-brackets {
+  @include position(absolute, 80%, 50%);
+  width: 10%;
+  opacity: 0.5;
+  user-select: none;
+}
+
+/*People Quotes Start*/
+
+/*Labels Styles Start*/
+
+.label-pink {
+  background-color: $secondary-color;
+  @extend %labels;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.label-green {
+  background-color: $success-color;
+  @extend %labels;
+  &:hover {
+    background-color: darken($success-color, 10%);
+  }
+}
+
+.label-yellow {
+  background-color: $warning-color;
+  @extend %labels;
+  &:hover {
+    background-color: darken($warning-color, 10%);
+  }
+}
+
+.alert-danger {
+  @extend %alerts;
+  background-color: $danger-color;
+  &:hover {
+    background-color: darken($danger-color, 20%);
+  }
+}
+
+.alert-warning {
+  @extend %alerts;
+  background-color: $warning-color;
+  &:hover {
+    background-color: darken($warning-color, 20%);
+  }
+}
+
+.alert-success {
+  @extend %alerts;
+  background-color: $success-color;
+  &:hover {
+    background-color: darken($success-color, 20%);
+  }
+}
+/*Labels Styles End*/
+
+/*End Of The File*/

@@ -1,0 +1,103 @@
+/* Beginning of The File */
+
+/* Responsibilites Of This File */
+
+/* It handle The Parallax Of Hero Content*/
+
+//Note: The Position of parallaxed item must be important to override the old values
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extended Styles Start */
+
+%parrallax-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Extended Styles End* /
+
+/* Hedaer Styles Start */
+
+/* Parallax Scene Styles Start */
+.layer {
+  z-index: $low-priority !important;
+}
+
+#scene {
+  @include position(absolute, 10vh, 0);
+  height: 90vh;
+  width: 80vw;
+  z-index: $low-priority;
+  pointer-events: none;
+}
+
+.parallax-img-1 {
+  @include position(absolute, 5% !important, 70% !important);
+  @include flex(center, row, center);
+  width: 150px;
+  z-index: $medium-priority !important;
+  padding: $spacing-3;
+
+  img {
+    @extend %parrallax-img;
+  }
+}
+
+/* Parallax Images Styles Start */
+
+.parallax-img-2 {
+  width: 300px;
+  @include position(absolute, 40% !important, 60% !important);
+  padding: $spacing-3;
+
+  img {
+    @extend %parrallax-img;
+  }
+}
+
+.parallax-img-3 {
+  @include position(absolute, 60% !important, 30% !important);
+  z-index: $medium-priority !important;
+  width: 150px;
+  padding: $spacing-3;
+
+  img {
+    @extend %parrallax-img;
+  }
+}
+
+.parallax-img-4 {
+  @include position(absolute, 80% !important, 40% !important);
+  width: 300px;
+  padding: $spacing-3;
+
+  img {
+    @extend %parrallax-img;
+  }
+}
+
+.parallax-img-5 {
+  @include position(absolute, 50% !important, 70% !important);
+  z-index: $medium-priority !important;
+  width: 200px;
+  padding: $spacing-3;
+
+  img {
+    @extend %parrallax-img;
+  }
+}
+
+/* Parallax Images Styles Start */
+
+/* End Of The File */

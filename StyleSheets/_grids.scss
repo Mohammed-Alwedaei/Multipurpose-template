@@ -1,0 +1,200 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* To handle all animated classes added in Javascript */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extended Styles Start */
+
+/* Extended Styles End */
+
+/* Groups Styles Start*/
+
+.filter-group {
+  @include flex(space-between, row, center);
+  margin-bottom: $spacing-3;
+}
+
+/* Groups Styles End*/
+
+/* Masonry Grid Start */
+
+.grid-sizer {
+  width: 25%;
+}
+
+.masonry-grid {
+  width: 100%;
+  min-height: 75vh;
+  @include flex-wrap(center, row, center, wrap);
+}
+
+.masonry-grid-showcase {
+  width: 100%;
+  min-height: 75vh;
+}
+
+.masonry-grid-item-fixed {
+  width: 25%;
+  height: 30%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    transition: all 0.4s $ease-in-out;
+  }
+  &:hover img {
+    transform: scale(1.6);
+  }
+}
+
+.masonry-grid-item-auto {
+  width: 25%;
+  height: auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    -o-object-fit: fill;
+  }
+}
+
+.masonry-grid-item-vh-100 {
+  height: 100vh;
+  width: 25%;
+}
+/* Masonry Grid End */
+
+/* Blog And Shop And Portfolio Grid Start */
+
+.masonry-grid-item-fixed {
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    width: 85%;
+    height: 80%;
+    transition: all 0.4s $ease-in-out;
+    background-color: inherit;
+    @include position(absolute, 50%, 50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid $white-color;
+    z-index: $medium-priority;
+  }
+
+  &:hover .masonry-grid-item-desc {
+    opacity: 1;
+  }
+  &:hover::before {
+    background-color: rgba($white-color, 0.6);
+  }
+}
+
+.masonry-grid-item-desc {
+  @include position(absolute, 0%, 10%);
+  color: $white-color;
+  opacity: 0;
+  z-index: $medium-priority;
+  @include flex(space-between, column, center);
+  width: 100%;
+  height: 70%;
+  z-index: $high-priority;
+  h1 {
+    color: $primary-color;
+    font-size: $small-font;
+    text-align: left;
+    width: 80%;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: $smallest-font;
+    text-align: left;
+    width: 80%;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: $smallest-font;
+    width: 80%;
+    text-align: right;
+  }
+}
+
+/* Blog And Shop And Portfolio Grid End */
+
+/* Blog And Shop And Portfolio Show More Button Start */
+
+.portflio-shop-show-more {
+  width: 100%;
+  text-align: center;
+}
+
+/* Blog And Shop And Portfolio Show More Button End */
+
+/* Social Media Start */
+
+.social-media-item {
+  @include flex(center, column, center);
+  height: 100%;
+  text-align: center;
+  padding: $spacing-1;
+
+  i {
+    font-size: $biggest-font;
+    color: $white-color;
+    transition: all 0.4s $ease-in;
+  }
+
+  a {
+    color: $white-color;
+    font-size: $medium-font;
+    text-decoration: none;
+  }
+
+  p {
+    color: $white-color;
+  }
+
+  &:hover i {
+    transform: translateY(-100px);
+  }
+}
+
+.twitter {
+  background-color: #00acee;
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+/* Social Media End */

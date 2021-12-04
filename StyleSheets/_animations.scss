@@ -1,0 +1,311 @@
+/* Beginning Of The File */
+
+/* Responsibilites Of This File */
+
+/* To handle all animated classes added in Javascript */
+
+/*
+        *
+      *
+    *
+  *
+*
+  *
+    *
+      *
+        *
+*/
+
+/* Extended Styles Start */
+
+%reveal {
+  @include position(absolute, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: $medium-priority;
+  pointer-events: none;
+}
+
+/* Extended Styles End */
+
+/* Preloader Animations Start */
+
+.preloader {
+  @include position(fixed, 0, 0);
+  height: 100vh;
+  width: 100vw;
+  background-image: $gradient-jshine;
+  z-index: 300;
+  transition: all 1s $ease-in;
+  transition-delay: 2s;
+  h1 {
+    color: $white-color;
+    font-size: $biggest-font;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.preloader-end {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-content {
+  @include position(absolute, 50%, 50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 30%;
+  @include flex(space-between, column, center);
+  overflow: hidden;
+}
+
+.preloader-progress-bar-container {
+  @include flex(space-between, center, row);
+  width: 40%;
+  border: 2px solid rgb(255, 164, 2);
+  height: 40px;
+  border-radius: $radius-50;
+}
+
+.preloader-progress-bar {
+  background-image: $gradient-morning;
+  width: 0%;
+  height: 100%;
+  border-radius: $radius-50;
+}
+
+.preloader-progress-text {
+  color: $primary-color;
+  font-size: $small-font;
+  animation: loadingAnimation 1s $ease-in infinite;
+  font-weight: bolder;
+}
+
+/* Preloader Animations End */
+
+/* Reveal Classes Start */
+
+.reveal-section {
+  @extend %reveal;
+}
+
+.reveal-img {
+  @extend %reveal;
+}
+
+.reveal-text {
+  @extend %reveal;
+}
+
+.reveal-img-pink {
+  @extend %reveal;
+  background-color: lighten($secondary-color, 20%);
+}
+
+.reveal-text-pink {
+  @extend %reveal;
+  background-color: lighten($secondary-color, 20%);
+}
+
+/* Reveal Classes End */
+
+/* Marquee Text Animation Start */
+
+.marquee-text {
+  @include position(absolute, 0%, 45%);
+  overflow: hidden;
+  z-index: $negative-priority;
+  animation: marquee-text-animation 10s linear infinite;
+
+  h1 {
+    font-size: 20rem;
+  }
+}
+
+@keyframes marquee-text-animation {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+
+  100% {
+    left: -120%;
+    opacity: 0.3;
+  }
+}
+
+/* Marquee Text Animation End */
+
+/* Dark Theme Styles Start */
+
+.dark-theme {
+  background-color: $dark-theme !important;
+  transition: all 0.4s $ease-in;
+  background-image: none !important;
+}
+
+.dark-theme-lighter {
+  background-color: lighten($dark-theme, 10%) !important;
+  background-image: none;
+}
+
+.parallax-inner-img-dark-theme {
+  background-color: lighten($dark-theme, 15%) !important;
+  background-image: none;
+}
+
+.will-change-dark-theme-shadows {
+  box-shadow: none !important;
+}
+
+/* Dark Theme Styles End */
+
+/* Close Popup Styles Start */
+
+.hide-popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s $ease-in;
+}
+
+.show-popup {
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.4s $ease-in;
+}
+
+/* Close Popup Styles End */
+
+/* Nav Bar Styles Start */
+
+.sticky-navbar {
+  @include position(fixed, 50%, 0);
+  transition: all 0.4s $ease-in;
+  height: 12vh;
+  width: 80%;
+  transform: translateX(-50%) skew(-15deg);
+  border-bottom-left-radius: $radius-10;
+  border-bottom-right-radius: $radius-10;
+}
+.header-skew-fix {
+  transform: skew(15deg);
+}
+
+body.nav-hide {
+  overflow: hidden;
+}
+
+/* Nav Bar Styles End */
+
+/* Cursor Styles Start */
+
+#cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $warning-color;
+  border-radius: 50%;
+  transform: translate(-35%, -35%);
+  transition: all 0.4s $ease-in;
+  opacity: 0.8;
+  transition-property: background, transform, opacity;
+
+  /* Highest Z-index Value */
+
+  z-index: 300;
+
+  /* Highest Z-index Value */
+
+  pointer-events: none;
+}
+
+#cursor-text {
+  color: $warning-color;
+  position: absolute;
+  color: $white-color;
+  font-size: 0.5rem;
+}
+
+#cursor.cursor-active {
+  background-color: $warning-color;
+  border: none;
+  transform: scale(5) translate(-15%, -15%);
+}
+
+/* Cursor Styles End */
+
+/* Button checked class Start */
+
+.is-checked {
+  background: -moz-linear-gradient(
+    15.65% -261.93% 45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    15.65% -261.93%,
+    80.8% -361.93%,
+    color-stop(0, rgba(251, 223, 99, 1)),
+    color-stop(1, rgba(255, 164, 2, 1))
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBDF63', endColorstr='#FFA402' ,GradientType=0)";
+  background: linear-gradient(
+    45deg,
+    rgba(251, 223, 99, 1) 0%,
+    rgba(255, 164, 2, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FBDF63',endColorstr='#FFA402' , GradientType=1);
+  color: $white-color;
+}
+
+/* Button checked class End */
+
+/* Question button Animation Start */
+
+.question-btn-animation {
+  transform: rotate(45deg);
+  transition: all 0.4s $ease-in;
+}
+
+/* Question button Animation End */
+
+/* Back To Top Button Start */
+
+.back-to-top-reveal {
+  bottom: 40px;
+  opacity: 1;
+}
+
+/* Back To Top Button End */
+
+/* Keyframes Animation Start */
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes Animation End */
+
+/* End Of The File */
